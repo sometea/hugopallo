@@ -4,7 +4,9 @@
   "description": "A Lambda function that downloads a source directory from S3, runs the Hugo static site generator on it, and uploads the result back to S3.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "watch": "tsc -w"
   },
   "keywords": [
     "hugo",
@@ -15,5 +17,11 @@
     "site"
   ],
   "author": "David Dasenbrook",
-  "license": "GPL-3.0-or-later"
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "aws-sdk": "^2.382.0"
+  },
+  "devDependencies": {
+    "@types/aws-sdk": "^2.7.0"
+  }
 }
